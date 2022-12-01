@@ -1,5 +1,5 @@
 ## Быстрый запуск
-
+Переименовать .env.example в .env и ввести туда необходимые переменные (либо же оставить существующие) <br />
 **docker-compose up --build** <br />
 **docker exec app python ./taxi/manage.py migrate**
 
