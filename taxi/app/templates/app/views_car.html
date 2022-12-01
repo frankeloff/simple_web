@@ -1,0 +1,24 @@
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<h1>{{ car_item.car_name }}</h1>
+<table border="1">
+    <tr>
+        <th>Фирма</th>
+        <th>Тариф</th>
+        <th>Цена(руб/км)</th>
+
+    </tr>
+    {% for item in car_item.price_set.all|dictsort:"firm.firm_name" %}
+    <tr th:each = "">
+        <td th:text="">{{ item.firm.firm_name }}</td>
+        <td th:text="">{{ item.rate.rate_name}}</td>
+        <td th:text="">{{ item.price}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<body>
+<br>
+<br>
+<br>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% for item in car %}
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="media">
+      <div class="media-body">
+        <h5 class="card-title {% cycle 'text-danger' 'text-success' %}">{{ item.car_name }}</h5>
+        <a href="{{ item.get_absolute_url }}" class="btn btn-primary">Показать</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% empty %}
+Oops...
+{% endfor %}
